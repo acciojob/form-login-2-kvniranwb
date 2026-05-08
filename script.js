@@ -1,13 +1,18 @@
-//your JS code here. If required.
-let fname= document.getElementById("fname");
-let lname= document.getElementById("lname");
-let phone = document.getElementById("pnum");
-let email= document.getElementById("email");
-let int = document.getElementById("btn");
-console.log(fname)
+const form = document.getElementById("form");
 
-int.addEventListener("click",function(){
-alert("First Name :"+ fname.value+
-	   "\n Last Name :"+ lname.value+
-	    "\nPhone Number :"+ phone.value+
-	 "\n Email ID :" +email.value)})
+form.addEventListener("submit", function (e) {
+
+	e.preventDefault();
+
+	let fname = document.getElementById("fname").value;
+	let lname = document.getElementById("lname").value;
+	let phone = document.getElementById("pnum").value;
+	let email = document.getElementById("email").value;
+
+	alert(
+		"First Name: " + fname +
+		"\nLast Name: " + lname +
+		"\nPhone Number: " + phone +
+		"\nEmail ID: " + email
+	);
+});
